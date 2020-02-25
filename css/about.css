@@ -2,11 +2,22 @@
             margin-top: 10px;
         }
         .image {
-            position: absolute;
+            position: fixed;
             border: 2px solid #5c5c5c;
             border-radius: 25px;
             height: 40px;
             width: 40px;
-            left: 0;
-            top: 0;
+            left: 4px;
+            top: 4px;
+        }
+        .image img {
+            margin: 0;
+            position: fixed;
+            top: 4px;
+            left: 4px;
+            margin-right: 0;
+            transform: initial;
+            object-fit: initial;
+            height: 40px;
+            width: 40px;
         }
