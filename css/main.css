@@ -120,8 +120,8 @@
                 color: #0c84fc;
             }
         }
-        @media only screen and (max-width: 850px) {
+        @media only screen and (max-width: 750px) {
             button {
-                margin: 70px;
+                margin: 10px;
             }
         }
