@@ -2,12 +2,11 @@
             margin-top: 10px;
         }
         .image {
-            position: relative;
+            position: fixed;
             border: 2px solid #5c5c5c;
             border-radius: 25px;
             height: 40px;
             width: 40px;
             left: 4px;
             top: 4px;
-            position: fixed;
         }
