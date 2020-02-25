@@ -107,7 +107,7 @@
         p {
             text-align: left;
             margin-left: 30px;
-            font-size: 17px;
+            font-size: 16px;
         }
         
         @media (prefers-color-scheme: dark) {
