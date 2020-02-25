@@ -10,3 +10,7 @@
             left: 0;
             top: 0;
         }
+        .image img {
+            margin: 0;
+            position: fixed;
+        }
