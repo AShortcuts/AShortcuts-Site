@@ -7,17 +7,17 @@
             border-radius: 25px;
             height: 40px;
             width: 40px;
-            left: 4px;
-            top: 4px;
+            left: 5px;
+            top: 5px;
         }
         .image img {
             margin: 0;
-            position: fixed;
-            top: 4px;
-            left: 4px;
+            position: inherit;
+            top: inherit;
+            left: inherit;
             margin-right: 0;
             transform: initial;
             object-fit: initial;
-            height: 40px;
-            width: 40px;
+            height: inherit;
+            width: inherit;
         }
