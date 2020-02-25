@@ -11,5 +11,5 @@
         
         .image img {
             margin-left: 0;
-            object-fit: cover;
+            float: left;
             }
