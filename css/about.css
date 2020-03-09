@@ -13,11 +13,11 @@ body {
 }
 
 
-/* @media only screen and (max-width: 750px) {
+@media only screen and (max-width: 750px) {
     .image {
-        top: 30px;
+        left: 15px;
     }
-} */
+}
 
 .image img {
     margin: 0;
