@@ -8,16 +8,16 @@ body {
     border-radius: 25px;
     height: 40px;
     width: 40px;
-    left: 20px;
+    left: 15px;
     top: 20px;
 }
 
 
-@media only screen and (max-width: 750px) {
+/* @media only screen and (max-width: 750px) {
     .image {
-        left: 15px;
+        top: 30px;
     }
-}
+} */
 
 .image img {
     margin: 0;
