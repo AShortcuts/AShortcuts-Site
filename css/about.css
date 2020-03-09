@@ -1,23 +1,31 @@
-        body {
-            margin-top: 10px;
-        }
-        .image {
-            position: fixed;
-            border: 2px solid #5c5c5c;
-            border-radius: 25px;
-            height: 40px;
-            width: 40px;
-            left: 10px;
-            top: 30px;
-        }
-        .image img {
-            margin: 0;
-            position: inherit;
-            top: inherit;
-            left: inherit;
-            margin-right: 0;
-            transform: initial;
-            object-fit: initial;
-            height: inherit;
-            width: inherit;
-        }
+body {
+    margin-top: 10px;
+}
+
+.image {
+    position: fixed;
+    border: 2px solid #5c5c5c;
+    border-radius: 25px;
+    height: 40px;
+    width: 40px;
+    left: 10px;
+    top: 20px;
+}
+
+@media only screen and (max-width: 750px) {
+    .image {
+        top: 30px;
+    }
+}
+
+.image img {
+    margin: 0;
+    position: inherit;
+    top: inherit;
+    left: inherit;
+    margin-right: 0;
+    transform: initial;
+    object-fit: initial;
+    height: inherit;
+    width: inherit;
+}
