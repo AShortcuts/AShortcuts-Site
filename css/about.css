@@ -12,12 +12,6 @@ body {
     top: 20px;
 }
 
-@media only screen and (max-width: 750px) {
-    .image {
-        top: 20px;
-    }
-}
-
 .image img {
     margin: 0;
     position: inherit;
