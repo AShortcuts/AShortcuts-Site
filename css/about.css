@@ -14,7 +14,7 @@ body {
 
 @media only screen and (max-width: 750px) {
     .image {
-        top: 70px;
+        top: 10px;
     }
 }
 
