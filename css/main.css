@@ -117,7 +117,7 @@
             }
             .button {
                 background-color: #5c5c5c;
-                color: #0c84fc;
+                color: dodgerblue;
             }
         }
         @media only screen and (max-width: 750px) {
