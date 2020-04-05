@@ -120,7 +120,7 @@
                 color: dodgerblue;
             }
         }
-        @media only screen and (max-width: 750px) {
+        @media only screen and (max-width: 1334px) {
             button {
                 margin: 10px;
             }
