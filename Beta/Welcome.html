@@ -1,0 +1,307 @@
+<!-- DO NOT COPY, MODIFY AND/OR USE THIS CODE WITHOUT PERMISSION! ©AShortcuts -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Lato|Titillium+Web|Bilbo|Pinyon+Script&display=swap');
+        html {
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+        
+        * {
+            margin: 0;
+        }
+        
+        body {
+            font-family: system-ui;
+            color: white;
+            background-color: black;
+            margin: 0;
+        }
+        
+        #loader {
+            position: absolute;
+            bottom: 3%;
+            left: 1.5%;
+            height: 40px;
+            display: flex;
+            align-items: center;
+        }
+        
+        #after-text {
+            display: none;
+            max-width: 500px;
+            font-weight: 500;
+        }
+        
+        a {
+            color: aqua;
+            text-decoration: none;
+            /* text-decoration-style: wavy; */
+        }
+        
+        section {
+            height: 100vh;
+            width: 100vw;
+            scroll-snap-align: start;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        
+        #welcome-page {
+            background: url('https://i.imgur.com/oYRHTPI.jpg');
+            background-size: 100%;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            animation: fadein 2s linear;
+        }
+        
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        #welcome-page-text {
+            animation: movein 2s ease-out forwards;
+            position: absolute;
+            left: 100px;
+            bottom: 53.2%;
+        }
+        
+        @keyframes movein {
+            from {
+                opacity: 0;
+                transform: translateY(20%);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        #welcome-page-text>h1 {
+            font-size: 2em;
+        }
+        
+        p {
+            font-size: 21px;
+        }
+        
+        #second-page {
+            background: darkcyan;
+            scroll-snap-stop: always;
+        }
+        
+        #third-page {
+            /* background: #21d4c5; */
+            background: #003366;
+            scroll-snap-stop: always;
+        }
+        
+        #third-page-text {
+            color: black;
+            font-family: Lato;
+            position: relative;
+            left: 80px;
+            top: 65px;
+        }
+        
+        #third-page-text a {
+            color: red;
+            text-shadow: #000000;
+            font-weight: normal;
+        }
+        
+        #third-page-text h1 {
+            font-size: 50px;
+            font-family: Titillium Web;
+            text-shadow: 0px 0px 3px aqua;
+            color: antiquewhite;
+        }
+        
+        #third-page-text ul {
+            margin: 10px;
+            font-weight: bold;
+            list-style-type: none;
+            font-size: 30px;
+            border: 2px solid yellow;
+            display: inline-block;
+        }
+        
+        #third-page-text ul li:before {
+            content: '';
+            display: inline-block;
+            height: 25px;
+            width: 25px;
+            background-size: 25px;
+            background-image: var(--my-icon-var);
+            background-repeat: no-repeat;
+            margin-right: 7px;
+        }
+        /* https://www.emoji.co.uk/files/emoji-one/symbols-emoji-one/2122-globe-with-meridians.png */
+        
+        #third-page-text li {
+            margin: 11px 0px;
+        }
+        
+        #third-page-text .HLinks {
+            font-size: 30px;
+            color: white;
+            display: inline-block;
+            font-family: Titillium Web;
+        }
+        
+        @media only screen and (max-width: 1334px) {
+            #welcome-page-text {
+                max-width: 200px;
+                font-weight: 450;
+                left: 15px;
+                bottom: 2%;
+            }
+        }
+        
+        .obj {
+            width: 6px;
+            height: 40px;
+            background: white;
+            margin: 0 3px;
+            border-radius: 10px;
+            animation: loading 0.8s infinite;
+            background-color: #61aaf3;
+        }
+        
+        .obj:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+        
+        .obj:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+        
+        .obj:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+        
+        .obj:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+        
+        .obj:nth-child(6) {
+            animation-delay: 0.5s;
+        }
+        
+        .obj:nth-child(7) {
+            animation-delay: 0.6s;
+        }
+        
+        .obj:nth-child(8) {
+            animation-delay: 0.7s;
+        }
+        
+        @keyframes loading {
+            0% {
+                height: 0px;
+            }
+            50% {
+                height: 40px;
+            }
+            100% {
+                height: 0px;
+            }
+        }
+    </style>
+    <script>
+        var Wait = setTimeout(showPage, 2400);
+
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("after-text").style.display = "block";
+        }
+    </script>
+</head>
+
+<body>
+    <div id="loader">
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+    </div>
+
+    <div id="after-text">
+        <section id="welcome-page">
+            <div id="welcome-page-text">
+                <h1>WELCOME</h1> <br>
+                <p>Welcome to <a href="https://ashortcutst.netlify.com">AShortcut's Website</a>.</p>
+            </div>
+        </section>
+        <section id="second-page">
+            <div id="second-page-text">
+                <h1>WELCOME</h1>
+                <p>Welcome to <a href="https://ashortcutst.netlify.com">AShortcut's Website</a>.</p>
+            </div>
+        </section>
+        <section id="third-page">
+            <div id="third-page-text">
+                <h1>Links</h1>
+                <br>
+                <ul style="float: left; width: 40%;">
+                    <li style="--my-icon-var: url('https://i.imgur.com/HyXPRBL.png')">
+                        <div class="HLinks">External Sources</div>
+                    </li>
+                    <li style="--my-icon-var: url('https://i.imgur.com/XKIFMhK.png')">
+                        <a href="https://ashortcutst.netlify.com">Website</a>
+                    </li>
+                    <li style="--my-icon-var: url('https://i.imgur.com/qEzQYeF.png')">
+                        <a href="https://routinehub.co/user/AShortcuts ">RoutineHub</a>
+                    </li>
+                    <li style="--my-icon-var: url('https://www.net-aware.org.uk/siteassets/images-and-icons/application-icons/app-icons-discord.png?w=585&scale=down')">
+                        <a href="https://discord.gg/5npjXpu">Discord</a>
+                    </li>
+                    <li style="--my-icon-var: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Reddit_logo_orange.svg/1200px-Reddit_logo_orange.svg.png')">
+                        <a href="https://www.reddit.com/user/AShortcuts">Reddit</a>
+                    </li>
+                    <li style="--my-icon-var: url('https://lh3.googleusercontent.com/proxy/SkmQ66jaixRhHzD50UldkRnrS8YiGu0TPVtYwlB4-Ih0lvqxsuqU_pYmaP9KH0k73FFRpsuiBkq5yIXCLIXTgSJ2iyJ_Poty1rG1b3B79F4BWhRZf96V2E2DG9RhftYjBJqL5ykjWVJo4tgjiMQwcA')">
+                        <a href="mailto:ashortcutst@gmail.com">Email</a>
+                    </li>
+                    <li style="--my-icon-var: url('https://cdn2.iconfinder.com/data/icons/social-icon-3/512/social_style_3_rss-512.png')">
+                        <a href="https://ashortcuts.bloggi.co">Blog</a>
+                    </li>
+                </ul>
+                <ul style="float: left; width: 40%;">
+                    <li style="--my-icon-var: url('https://i.imgur.com/HyXPRBL.png')">
+                        <div class="HLinks">Table of Contents</div>
+                    </li>
+                    <li style="--my-icon-var: url('https://i.imgur.com/QLPqA1Z.png')">
+                        <a href="https://ashortcutst.netlify.com">Welcome</a>
+                    </li>
+                    <li style="--my-icon-var: url('https://i.imgur.com/PmVNTAH.png')">
+                        <a href="https://ashortcutst.netlify.com">Main</a>
+                    </li>
+                    <li style="--my-icon-var: url('https://i.imgur.com/Z5tdeB4.png')">
+                        <a href="https://ashortcutst.netlify.com/about%20page">About</a>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
