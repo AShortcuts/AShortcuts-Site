@@ -41,8 +41,7 @@
             margin: 5px 3px -5px 3px;
         }
         
-        #all-shortcuts>div {
-            /* shortcut-container */
+        .shortcut-container {
             /* background: linear-gradient(145deg, dodgerblue 19%, rgba(253, 29, 29, 1) 58%, rgba(252, 176, 69, 1) 85%); */
             /* background: linear-gradient(145deg, dodgerblue 19%, rgba(253, 29, 29, 1) 80%); */
             background: linear-gradient(145deg, rgba(253, 29, 29, 1), #f06d06);
@@ -54,11 +53,11 @@
             animation: fadein 2s linear;
         }
         
-        #all-shortcuts>div:hover {
+        .shortcut-container:hover {
             opacity: 0.75;
         }
         
-        #all-shortcuts>div:active {
+        .shortcut-container:active {
             opacity: 0.50;
         }
         
@@ -75,12 +74,11 @@
             color: inherit;
             width: inherit;
             height: inherit;
-            background: inherit;
+            background: none;
             text-decoration: none;
         }
         
-        #all-shortcuts>div>a>div>img {
-            /* shortcut-icon */
+        .shortcut-icon {
             height: auto;
             width: 60px;
             border-radius: 20px;
@@ -88,42 +86,30 @@
             border: 1px solid white;
         }
         
-        #all-shortcuts>div>a>div:nth-child(2) {
-            /* shortcut-name */
-            background: none;
+        .shortcut-name {
             margin-top: 3px;
         }
         
-        #all-shortcuts>div>a>div:nth-child(3) {
-            /* shortcut-subtitle */
-            background: none;
+        .shortcut-subtitle {
             font-size: 12px;
         }
         
-        #all-shortcuts>div>a>div:nth-child(4) {
-            /* shortcut-version */
-            background: none;
+        .shortcut-version {
             font-size: 11px;
             margin-top: 5px;
             margin-bottom: 3px;
         }
         
-        #all-shortcuts>div>div:nth-child(2) {
-            /* download-shortcut */
-            text-align: center;
-            margin-top: 5px;
-            width: 60px;
-            font-size: 12px;
-            padding: 4px;
-            background: aqua;
-            border-radius: 20px;
-            color: black;
-            float: left;
+        .download-shortcut {
+            margin: 5px 40% -10px -3px;
+            height: auto;
+            background: none;
+            width: 40px;
+            /* font-size: 12px; */
             display: inline-block;
         }
         
-        #all-shortcuts>div>div:nth-child(3) {
-            /* shortcut-hearts, downloads */
+        .shortcut-stats {
             text-align: center;
             margin-top: 5px;
             width: 80px;
@@ -132,7 +118,6 @@
             background: lightgrey;
             border-radius: 20px;
             color: black;
-            float: right;
             display: inline-block;
         }
         
@@ -211,7 +196,7 @@
                 var rhapi = "https://routinehub.co/api/v1/shortcuts/" + value + "/versions/latest";
                 // var rhNewApi = "https://routinehub-api.glitch.me/shortcut/" + value;
                 $.getJSON(rhapi, function(data) {
-                    var rhurl = `"https://routinehub.co/shortcut/${value}"`
+                    var rhurl = `https://routinehub.co/shortcut/${value}`
                     var Version = `${data.Version}`
 
                     var RDate = `${data.Release}`
@@ -230,11 +215,11 @@
                     var ISOrdate = `${da}-${mo}-${ye}`
 
                     var RNotes = `${data.Notes}`
-                    var download = `"https://routinehub.co/download/${data.id}"`
+                    var downloadlink = `"https://routinehub.co/download/${data.id}"`
                     var iCloudURL = `${data.URL}`
                     var iCloudID = iCloudURL.replace("https://www.icloud.com/shortcuts/", "");
                     var iCloudAPI = `https://www.icloud.com/shortcuts/api/records/${iCloudID}`
-                    var icon = `<img src="https://routinehub-assets.s3.amazonaws.com/media/shortcuts/icons/${iCloudID}.png">`
+                    var icon = `https://routinehub-assets.s3.amazonaws.com/media/shortcuts/icons/${iCloudID}.png`
                     var rhNewApi = `https://routinehub-api.glitch.me/shortcut/${value}`;
 
                     // $.getJSON(rhNewApi, RetrieveNewInfo(result))
@@ -243,7 +228,7 @@
                     // $.getJSON(iCloudAPI, RetrieveiCloudAPI(hi))
 
 
-                    $('#all-shortcuts').append("<div><a href=" + rhurl + "><div>" + icon + "</div><div>Ultimate Power Mode</div><div>Mastery over your Battery</div><div>v" + Version + " @ " + ISOrdate + "</div></a><div><a href=" + download + ">Download</a></div><div>♥️ ‏‏‎ ‎5 ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎‎‎‎⬇️‏‏‎ ‏‏‎ ‎‎1,000</div></div>")
+                    $('#all-shortcuts').append("<div class=\"shortcut-container\"><a href=\"" + rhurl + "\"><img class=\"shortcut-icon\" src=\"" + icon + "\"></img><div class=\"shortcut-name\">Ultimate Power Mode</div><div class=\"shortcut-subtitle\">Mastery over your Battery</div><div class=\"shortcut-version\">v" + Version + " @ " + ISOrdate + "</div></a><a href=" + downloadlink + "><img class=\"download-shortcut\" src=\"https://i.imgur.com/WmgJJHh.png\"></img></a><div class=\"shortcut-stats\">♥️ &rlm;&rlm;&lrm;5 &lrm;&rlm;&rlm;&lrm; &lrm;&rlm;&rlm;&lrm; &lrm;&rlm;&rlm;&lrm; &lrm;&rlm;&rlm;&lrm;&lrm;⬇️&rlm;&rlm;&lrm; &rlm;&rlm; &lrm;1,000</div></div>")
 
                     // $('all-shortcuts').append("<div><div>" + icon + "</div><div class="shortcut-name"></div><div class="shortcut-subtitle"></div><div class="shortcut-version"> + Version + </div></div>
                     // ;
