@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="img/ASlogo.png">
     <link rel="apple-touch-icon" href="img/ASlogo.png">
-
     <title>AShortcuts Shortcuts</title>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <style>
@@ -107,6 +106,28 @@
             width: 40px;
             /* font-size: 12px; */
             display: inline-block;
+        }
+        
+        .download-shortcut:hover {
+            animation: heartbeat 2s linear;
+        }
+        
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            14% {
+                transform: scale(1.1);
+            }
+            28% {
+                transform: scale(1);
+            }
+            42% {
+                transform: scale(1.1);
+            }
+            70% {
+                transform: scale(1);
+            }
         }
         
         .shortcut-stats {
