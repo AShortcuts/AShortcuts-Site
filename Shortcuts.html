@@ -7,6 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="img/ASlogo.png">
     <link rel="apple-touch-icon" href="img/ASlogo.png">
+    <meta property="og:title" content="AShortcuts Website">
+    <meta property="og:description" content="Devoted iOS Shortcuts Developer">
+    <meta property="og:image" content="img/ASlogo.png">
+    <meta property="og:url" content="https://ashortcutst.netlify.app/shortcuts">
+    <meta property="twitter:card" content="img/AShortcuts_-_1.jpeg">
     <title>AShortcuts Shortcuts</title>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <style>
@@ -49,6 +54,8 @@
             display: inline-block;
             margin: 10px;
             color: white;
+            width: 220px;
+            height: 155px;
             animation: fadein 2s linear;
         }
         
@@ -100,11 +107,29 @@
         }
         
         .download-shortcut {
-            margin: 5px 40% -10px -3px;
+            /* margin: 5px 40% -10px -3px; */
+            position: relative;
+            right: 22%;
+            top: 0px;
             height: auto;
             background: none;
             width: 40px;
             /* font-size: 12px; */
+            display: inline-block;
+        }
+        
+        .shortcut-stats {
+            position: relative;
+            left: 22%;
+            bottom: 7px;
+            text-align: center;
+            margin-top: 5px;
+            width: 80px;
+            font-size: 10px;
+            padding: 4px;
+            background: lightgrey;
+            border-radius: 20px;
+            color: black;
             display: inline-block;
         }
         
@@ -128,18 +153,6 @@
             70% {
                 transform: scale(1);
             }
-        }
-        
-        .shortcut-stats {
-            text-align: center;
-            margin-top: 5px;
-            width: 80px;
-            font-size: 10px;
-            padding: 4px;
-            background: lightgrey;
-            border-radius: 20px;
-            color: black;
-            display: inline-block;
         }
         
         picture>img {
@@ -197,6 +210,8 @@
         <img src="https://i.imgur.com/6R6ze4u.png" width="1300">
     </picture>
 
+    <!-- <div id="Sourced">All of this information has been sourced from RoutinrhUb.co</div> -->
+
 
 
 
@@ -204,9 +219,31 @@
     <script>
         window.onload = GetShortcuts();
 
-        function RetrieveiCloudAPI(shortcut_data) {
-            alert(hi);
+        /* function RetrieveiCloudAPI(newApi) {
+            $.getJSON(newApi, function(more_data) {
+                var Name = `${more_data.title}`
+                var Subtitle = `${more_data.subtitle}`;
+                var Downloads = `${more_data.downloads}`;
+            });
+        } */
+
+        function RetrieveiCloudAPI(catalog) {
+            $.getJSON(catalog, function icloudjson(more_data) {
+                window.x = 11;
+
+                return x;
+            });
+            return "Ultimate Power Mode";
         }
+
+        function ExtractRegex(url) {
+            $.get(url + ".html", function begin_extraction(html) {
+                // html == entire page in html string
+                alert("Hi")
+                alert(html)
+            });
+        }
+
 
         function GetShortcuts() {
             var IDs = [815, 1206, 1411, 2380, 1951, 887, 1841, 1010, 1118, 2002, 2193, 2119, 1444, 1637, 603, 3771, 1044, 2387, 1763, 2500, 1993, 3920, 3003, 1013, 1860, 601, 598, 2118, 2386, 1412, 2450, 2106, 774, 1217, 2926, 855, 2088, 2384, 2409, 2379, 2260, 2499, 602, 1328, 1994, 1995, 3921, 2539, 4200];
@@ -214,13 +251,13 @@
             $("h2").prepend(Amount)
 
             $.each(IDs, function(index, value) {
+                var rhurl = "https://routinehub.co/shortcut/" + value;
                 var rhapi = "https://routinehub.co/api/v1/shortcuts/" + value + "/versions/latest";
-                // var rhNewApi = "https://routinehub-api.glitch.me/shortcut/" + value;
+                var rhNewApi = "https://routinehub-api.glitch.me/shortcut/" + value;
                 $.getJSON(rhapi, function(data) {
-                    var rhurl = `https://routinehub.co/shortcut/${value}`
-                    var Version = `${data.Version}`
 
-                    var RDate = `${data.Release}`
+                    window.Version = `${data.Version}`
+                    window.RDate = `${data.Release}`
 
                     const d = new Date(RDate)
                     const ye = new Intl.DateTimeFormat('en', {
@@ -233,23 +270,30 @@
                         day: '2-digit'
                     }).format(d)
 
-                    var ISOrdate = `${da}-${mo}-${ye}`
+                    window.ISOrdate = `${da}-${mo}-${ye}`
 
-                    var RNotes = `${data.Notes}`
-                    var downloadlink = `"https://routinehub.co/download/${data.id}"`
-                    var iCloudURL = `${data.URL}`
-                    var iCloudID = iCloudURL.replace("https://www.icloud.com/shortcuts/", "");
-                    var iCloudAPI = `https://www.icloud.com/shortcuts/api/records/${iCloudID}`
-                    var icon = `https://routinehub-assets.s3.amazonaws.com/media/shortcuts/icons/${iCloudID}.png`
-                    var rhNewApi = `https://routinehub-api.glitch.me/shortcut/${value}`;
+                    window.RNotes = `${data.Notes}`
+                    window.downloadlink = `"https://routinehub.co/download/${data.id}"`
+                    window.iCloudURL = `${data.URL}`
+                    window.iCloudID = iCloudURL.replace("https://www.icloud.com/shortcuts/", "")
+                    window.iCloudAPI = `https://www.icloud.com/shortcuts/api/records/${iCloudID}`
+                    window.icon = `https://routinehub-assets.s3.amazonaws.com/media/shortcuts/icons/${iCloudID}.png`;
 
-                    // $.getJSON(rhNewApi, RetrieveNewInfo(result))
+                    // var Name = RetrieveiCloudAPI(iCloudAPI);
+
+                    // var Name = `${RetrieveiCloudAPI(iCloudAPI)}`;
+                    var Name = "Ultimate Power Mode"
+
+                    var RegexInfo = `${ExtractRegex(rhurl)}`
+
+
+                    // $.getJSON(rhNewApi,  RetrieveNewInfo(result) {
 
                     //  var iCloudResults = `${RetrieveiCloudAPI(iCloudAPI)}`;
                     // $.getJSON(iCloudAPI, RetrieveiCloudAPI(hi))
 
 
-                    $('#all-shortcuts').append("<div class=\"shortcut-container\"><a href=\"" + rhurl + "\"><img class=\"shortcut-icon\" src=\"" + icon + "\"></img><div class=\"shortcut-name\">Ultimate Power Mode</div><div class=\"shortcut-subtitle\">Mastery over your Battery</div><div class=\"shortcut-version\">v" + Version + " @ " + ISOrdate + "</div></a><a href=" + downloadlink + "><img class=\"download-shortcut\" src=\"https://i.imgur.com/WmgJJHh.png\"></img></a><div class=\"shortcut-stats\">♥️ &rlm;&rlm;&lrm;5 &lrm;&rlm;&rlm;&lrm; &lrm;&rlm;&rlm;&lrm; &lrm;&rlm;&rlm;&lrm; &lrm;&rlm;&rlm;&lrm;&lrm;⬇️&rlm;&rlm;&lrm; &rlm;&rlm; &lrm;1,000</div></div>")
+                    $('#all-shortcuts').append("<div class=\"shortcut-container\"><a href=\"" + rhurl + "\"><img class=\"shortcut-icon\" src=\"" + icon + "\"></img><div class=\"shortcut-name\">" + Name + "</div><div class=\"shortcut-subtitle\">Mastery over your Battery</div><div class=\"shortcut-version\">v" + Version + " @ " + ISOrdate + "</div></a><a href=" + downloadlink + "><img class=\"download-shortcut\" src=\"https://i.imgur.com/WmgJJHh.png\"></img></a><div class=\"shortcut-stats\">♥️ &rlm;&rlm;&lrm;5 &lrm;&rlm;&rlm;&lrm; &lrm;&rlm;&rlm;&lrm; &lrm;&rlm;&rlm;&lrm; &lrm;&rlm;&rlm;&lrm;&lrm;⬇️&rlm;&rlm;&lrm; &rlm;&rlm; &lrm;1,000</div></div>")
 
                     // $('all-shortcuts').append("<div><div>" + icon + "</div><div class="shortcut-name"></div><div class="shortcut-subtitle"></div><div class="shortcut-version"> + Version + </div></div>
                     // ;
@@ -263,9 +307,9 @@
             });
         }
 
-        function RetrieveNewInfo(shortcut_data) {
+        /* function RetrieveNewInfo(shortcut_data) {
             alert("Hi")
-        }
+        } */
     </script>
 </body>
 
