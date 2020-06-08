@@ -85,7 +85,7 @@
 
 .nav-bar a:hover,
 .dropdown:hover .dropbtn {
-    background-color: lightslategray;
+    background-color: lightgray;
 }
 
 .dropdown-content a:hover {
@@ -150,7 +150,7 @@
         display: none;
     }
     .nav-bar a {
-        font-size: 12px;
+        font-size: 13px;
         padding: 10px 12px;
         margin-right: 0;
     }
@@ -186,8 +186,8 @@
     .nav-bar.responsive .dropdown-content {
         position: relative;
     }
-    .nav-bar.responsive .dropdown-content a {
-        font-size: 10px;
+    .dropdown-content a {
+        font-size: 11px;
     }
     .nav-bar.responsive .dropdown .dropbtn {
         display: block;
