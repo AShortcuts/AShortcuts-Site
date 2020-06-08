@@ -45,7 +45,19 @@ li {
 }
 
 #index {
-    margin-top: 100px;
+    margin-top: 130px;
+    animation: movein 2s ease-out forwards;
+}
+
+@keyframes movein {
+    0% {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .image {
