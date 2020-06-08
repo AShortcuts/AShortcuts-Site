@@ -118,12 +118,11 @@
         outline: none;
         color: #f2f2f2;
     }
+    .dropdown-content>a {
+        color: black;
+    }
     .active {
         color: white;
-    }
-    .nav-bar a:hover,
-    .dropdown:hover .dropbtn {
-        background-color: lightgrey;
     }
 }
 
