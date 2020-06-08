@@ -103,6 +103,12 @@
     border-radius: 100%;
 }
 
+@media (prefers-color-scheme: light) {
+    body {
+        color: black;
+    }
+}
+
 @media screen and (max-width: 600px) {
     body {
         margin-top: 10px;
