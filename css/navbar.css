@@ -121,6 +121,10 @@
     .active {
         color: white;
     }
+    .nav-bar a:hover,
+    .dropdown:hover .dropbtn {
+        background-color: lightgrey;
+    }
 }
 
 @media screen and (max-width: 600px) {
