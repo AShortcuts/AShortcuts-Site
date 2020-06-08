@@ -25,7 +25,7 @@
 .nav-bar a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -55,7 +55,7 @@
     font-size: 17px;
     border: none;
     outline: none;
-    color: white;
+    color: black;
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
@@ -103,9 +103,19 @@
     border-radius: 100%;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
     body {
-        color: black;
+        color: white;
+        background: black;
+    }
+    .nav-bar a {
+        color: #f2f2f2;
+    }
+    .dropdown .dropbtn {
+        font-size: 17px;
+        border: none;
+        outline: none;
+        color: #f2f2f2;
     }
 }
 
