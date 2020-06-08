@@ -140,6 +140,9 @@
         padding: 6px;
         font-size: 20px !important;
     }
+    .nav-bar a.icon:hover {
+        background-color: initial;
+    }
     .nav-bar.responsive {
         position: relative;
     }
