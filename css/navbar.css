@@ -38,7 +38,7 @@
 .active {
     background: crimson;
     font-weight: bold;
-    color: white
+    color: white !important;
 }
 
 .nav-bar .icon {
@@ -119,7 +119,7 @@
         color: #f2f2f2;
     }
     .active {
-        color: white
+        color: white;
     }
 }
 
