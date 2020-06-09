@@ -145,7 +145,6 @@
         width: 40px;
         margin: 18px auto 2px;
         padding: 0;
-        z-index: 2;
     }
     #logo-view {
         display: none;
@@ -178,7 +177,7 @@
         margin-top: 11px;
         margin-right: 15px;
         padding: 3px;
-        color: white;
+        color: black;
     }
     .nav-bar.responsive a {
         float: none;
