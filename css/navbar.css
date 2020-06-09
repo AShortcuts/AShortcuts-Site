@@ -129,6 +129,7 @@
         outline: none;
         color: #f2f2f2;
     }
+    .nav-bar a:hover,
     .dropdown:hover .dropbtn {
         background-color: #555;
     }
