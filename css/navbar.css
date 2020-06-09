@@ -2,6 +2,7 @@
     position: fixed;
     left: 5px;
     top: 5px;
+    background: white;
     border: 3px solid grey;
     border-radius: 7px;
     margin: 0;
@@ -107,6 +108,9 @@
 @media (prefers-color-scheme: dark) {
     body {
         color: white;
+        background: black;
+    }
+    .nav-bar {
         background: black;
     }
     .nav-bar a {
