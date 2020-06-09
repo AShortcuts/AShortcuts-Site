@@ -94,7 +94,7 @@
 }
 
 .dropdown-content a:hover {
-    background-color: lightseagreen;
+    background-color: lightseagreen !important;
     color: white;
 }
 
