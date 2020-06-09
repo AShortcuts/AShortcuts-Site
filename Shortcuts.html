@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/shortcuts.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="icon" href="img/ASlogo.png">
     <link rel="apple-touch-icon" href="img/ASlogo.png">
@@ -19,166 +20,44 @@
     <title>AS • Shortcuts</title>
     <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-        @import url('https://db.onlinewebfonts.com/c/23f6a3ef666a3eb2b4a69dd71f693343?family=Whitney-Semibold');
-        body {
-            font-family: Whitney-Semibold;
-            font-weight: 200;
-            font-size: 23px;
-            text-align: center;
+        .nav-bar {
+            max-width: 97%;
         }
         
-        h1 {
-            font-family: Lato;
-            font-weight: bold;
-            margin-bottom: 0;
-            text-shadow: 0px 0px 3px #ff0000;
-        }
-        
-        h2 {
-            margin-top: 5px;
-            font-family: Lato;
-            font-weight: bold;
-            text-shadow: 0px 0px 3px aqua;
-            display: inline-block;
-        }
-        
-        .shortcut_badge {
-            display: inline-block;
-            height: 40px;
-            margin: 5px 3px -5px 3px;
-        }
-        
-        .shortcut-container {
-            /* background: linear-gradient(145deg, dodgerblue 19%, rgba(253, 29, 29, 1) 58%, rgba(252, 176, 69, 1) 85%); */
-            /* background: linear-gradient(145deg, dodgerblue 19%, rgba(253, 29, 29, 1) 80%); */
-            background: linear-gradient(145deg, rgba(253, 29, 29, 1), #f06d06);
-            border-radius: 15px;
-            padding: 12px;
-            display: inline-block;
-            margin: 10px;
-            color: white;
-            width: 220px;
-            height: 155px;
-            animation: fadein 2s linear;
-            transition-duration: 0.3s;
-            transition-property: transform;
-        }
-        
-        .shortcut-container:hover {
-            transform: scale(1.06);
-        }
-        
-        .shortcut-container:active {
-            opacity: 0.75;
-        }
-        
-        @keyframes fadein {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        
-        a {
-            color: inherit;
-            width: inherit;
-            height: inherit;
-            background: none;
-            text-decoration: none;
-        }
-        
-        .shortcut-icon {
-            height: auto;
-            width: 60px;
-            border-radius: 20px;
-            margin-top: -5px;
-            border: 1px solid white;
-        }
-        
-        .shortcut-name {
-            margin-top: 3px;
-        }
-        
-        .shortcut-subtitle {
-            font-size: 12px;
-        }
-        
-        .shortcut-version {
-            font-size: 11px;
-            margin-top: 5px;
-            margin-bottom: 3px;
-        }
-        
-        .download-shortcut {
-            /* margin: 5px 40% -10px -3px; */
-            position: relative;
-            right: 22%;
-            top: 0px;
-            height: auto;
-            background: none;
-            width: 40px;
-            /* font-size: 12px; */
-            display: inline-block;
-        }
-        
-        .shortcut-stats {
-            position: relative;
-            left: 22%;
-            bottom: 7px;
-            text-align: center;
-            margin-top: 5px;
-            width: 80px;
-            font-size: 10px;
-            padding: 4px;
-            background: lightgrey;
-            border-radius: 20px;
-            color: black;
-            display: inline-block;
-        }
-        
-        .download-shortcut:hover {
-            animation: heartbeat 2s linear;
-        }
-        
-        @keyframes heartbeat {
-            0% {
-                transform: scale(1);
-            }
-            14% {
-                transform: scale(1.1);
-            }
-            28% {
-                transform: scale(1);
-            }
-            42% {
-                transform: scale(1.1);
-            }
-            70% {
-                transform: scale(1);
-            }
-        }
-        
-        div:empty {
-            display: none;
-        }
-        
-        @media (prefers-color-scheme: dark) {
-            body {
-                background: black;
-            }
-            h1,
-            h2 {
-                color: #ddd;
+        @media screen and (max-width: 600px) {
+            .nav-bar {
+                max-width: 89%;
             }
         }
     </style>
 </head>
 
 <body>
+    <img src="img/AS%20Cool%20Red%20Circular.png" alt="Logo" id="logo-hidden">
+    <div class="nav-bar" id="MNB">
+        <a href="https://ashortcutst.netlify.app/">Home</a>
+        <a href="https://ashortcutst.netlify.app/welcome">Welcome</a>
+        <a href="https://ashortcuts.bloggi.co/">News</a>
+        <a href="https://routinehub.co/user/AShortcuts">RoutineHub</a>
+        <a href="https://ashortcutst.netlify.app/shortcuts" class="active">Shortcuts</a>
+        <div class="dropdown">
+            <button class="dropbtn">Contact 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="mailto:ashortcutst@gmail.com?subject=Website Contact">Email <img class="sm-icons" src="https://developer.apple.com/design/human-interface-guidelines/watchos/images/icon-and-image-large-icon-mail_2x.png"></a>
+                <a href="https://www.reddit.com/u/AShortcuts/">Reddit <img class="sm-icons" src="https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_reddit-512.png"></a>
+                <a href="https://discord.gg/5npjXpu">Discord Server <img class="sm-icons" src="https://b1.pngbarn.com/png/916/717/clay-os-6-a-macos-icon-discord-round-blue-icon-png-clip-art.png"></a>
+            </div>
+        </div>
+        <a href="https://ashortcutst.netlify.app/about">About</a>
+        <img src="img/AS%20Cool%20Red%20Circular.png" alt="Logo" id="logo-view">
+        <a href="javascript:void(0);" style="font-size: 15px;" class="icon" onclick="minimize()">&#9776;</a>
+    </div>
+
+
     <h1><a href="https://routinehub.co/user/AShortcuts">AShortcut's</a></h1>
     <img src="https://i.imgur.com/lyFtz4F.png" class="shortcut_badge">
     <h2> Shortcuts</h2>
@@ -206,6 +85,17 @@
 
     <script>
         window.onload = GetShortcuts();
+
+        function minimize() {
+            var x = document.getElementById("MNB");
+            if (x.className === "nav-bar") {
+                x.className += " responsive";
+                // document.getElementById("logo-view").style.display = "none";
+            } else {
+                x.className = "nav-bar";
+                // document.getElementById("logo-view").style.display = "inline";
+            }
+        }
 
         /* function RetrieveiCloudAPI(newApi) {
             $.getJSON(newApi, function(more_data) {
