@@ -30,3 +30,13 @@ body {
     height: inherit;
     width: inherit;
 }
+
+#about {
+    margin-top: 100px;
+}
+
+@media screen and (max-width: 1334px) {
+    #about {
+        margin-top: 35px;
+    }
+}
