@@ -142,7 +142,7 @@ p {
     button {
         margin-bottom: 9px;
     }
-    #Line-Break {
+    .Line-Break {
         display: block;
     }
     #index {
