@@ -20,15 +20,63 @@
     <title>AS • About</title>
     <script src="https://kit.fontawesome.com/91faf0cfe2.js"></script>
     <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+
+    <style>
+        .nav-bar {
+            max-width: 97.5%;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .nav-bar {
+                max-width: 89%;
+            }
+        }
+    </style>
 </head>
 
 <body data-gr-c-s-loaded="true">
-    <div>
-        <a href="https://ashortcutst.netlify.com"><img src="img/AShortcuts%20Cool.png" alt="Logo" title="Logo" width="100" height="100" class="image"></a>
+    <img src="img/AS%20Cool%20Red%20Circular.png" alt="Logo" id="logo-hidden">
+    <div class="nav-bar" id="MNB">
+        <a href="https://ashortcutst.netlify.app/">Home</a>
+        <a href="https://ashortcutst.netlify.app/welcome">Welcome</a>
+        <a href="https://ashortcuts.bloggi.co/">News</a>
+        <a href="https://routinehub.co/user/AShortcuts">RoutineHub</a>
+        <a href="https://ashortcutst.netlify.app/shortcuts">Shortcuts</a>
+        <div class="dropdown">
+            <button class="dropbtn">Contact 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="mailto:ashortcutst@gmail.com?subject=Website Contact">Email <img class="sm-icons" src="https://developer.apple.com/design/human-interface-guidelines/watchos/images/icon-and-image-large-icon-mail_2x.png"></a>
+                <a href="https://www.reddit.com/u/AShortcuts/">Reddit <img class="sm-icons" src="https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_reddit-512.png"></a>
+                <a href="https://discord.gg/5npjXpu">Discord Server <img class="sm-icons" src="https://b1.pngbarn.com/png/916/717/clay-os-6-a-macos-icon-discord-round-blue-icon-png-clip-art.png"></a>
+            </div>
+        </div>
+        <a href="https://ashortcutst.netlify.app/about" class="active">About</a>
+        <img src="img/AS%20Cool%20Red%20Circular.png" alt="Logo" id="logo-view">
+        <a href="javascript:void(0);" style="font-size: 15px;" class="icon" onclick="minimize()">&#9776;</a>
+    </div>
+
+    <script>
+        function minimize() {
+            var x = document.getElementById("MNB");
+            if (x.className === "nav-bar") {
+                x.className += " responsive";
+                // document.getElementById("logo-view").style.display = "none";
+            } else {
+                x.className = "nav-bar";
+                // document.getElementById("logo-view").style.display = "inline";
+            }
+        }
+    </script>
+
+
+    <div id="about">
+        <!-- <a href="https://ashortcutst.netlify.com"><img src="img/AShortcuts%20Cool.png" alt="Logo" title="Logo" width="100" height="100" class="image"></a> -->
         <h1 class="AShortcuts">AShortcuts</h1>
         <hr>
         <!--#AF0338,#BF3302-->
-        <h1 class="headings" id="about">About Me</h1>
+        <h1 class="headings">About Me</h1>
         <p>
             Welcome to my website. <br> I am <a href="https://routinehub.co/user/AShortcuts"><span class="AShortcuts">AShortcuts</span></a>, a devoted Shortcut creator. <br> I have created many useful workflows that ease my life through the iOS app called
             <a href="https://apps.apple.com/us/app/shortcuts/id915249334"><span class="Shortcuts">Shortcuts</span></a>.
