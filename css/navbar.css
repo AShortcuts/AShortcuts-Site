@@ -145,6 +145,7 @@
         width: 40px;
         margin: 18px auto 2px;
         padding: 0;
+        z-index: 2;
     }
     #logo-view {
         display: none;
