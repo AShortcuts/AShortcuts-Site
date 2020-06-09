@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://db.onlinewebfonts.com/c/23f6a3ef666a3eb2b4a69dd71f693343?family=Whitney-Semibold');
+body {
+    font-family: Whitney-Semibold;
+    font-weight: 200;
+    font-size: 23px;
+    text-align: center;
+}
+
+h1 {
+    font-family: Lato;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-shadow: 0px 0px 3px #ff0000;
+    margin-top: 100px;
+}
+
+h2 {
+    margin-top: 5px;
+    font-family: Lato;
+    font-weight: bold;
+    text-shadow: 0px 0px 3px aqua;
+    display: inline-block;
+}
+
+.shortcut_badge {
+    display: inline-block;
+    height: 40px;
+    margin: 5px 3px -5px 3px;
+}
+
+.shortcut-container {
+    /* background: linear-gradient(145deg, dodgerblue 19%, rgba(253, 29, 29, 1) 58%, rgba(252, 176, 69, 1) 85%); */
+    /* background: linear-gradient(145deg, dodgerblue 19%, rgba(253, 29, 29, 1) 80%); */
+    background: linear-gradient(145deg, rgba(253, 29, 29, 1), #f06d06);
+    border-radius: 15px;
+    padding: 12px;
+    display: inline-block;
+    margin: 10px;
+    color: white;
+    width: 220px;
+    height: 155px;
+    animation: fadein 2s linear;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.shortcut-container:hover {
+    transform: scale(1.06);
+}
+
+.shortcut-container:active {
+    opacity: 0.75;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+a {
+    color: inherit;
+    height: inherit;
+    background: none;
+    text-decoration: none;
+}
+
+.shortcut-icon {
+    height: auto;
+    width: 60px;
+    border-radius: 20px;
+    margin-top: -5px;
+    border: 1px solid white;
+}
+
+.shortcut-name {
+    margin-top: 3px;
+}
+
+.shortcut-subtitle {
+    font-size: 12px;
+}
+
+.shortcut-version {
+    font-size: 11px;
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
+.download-shortcut {
+    /* margin: 5px 40% -10px -3px; */
+    position: relative;
+    right: 22%;
+    top: 0px;
+    height: auto;
+    background: none;
+    width: 40px;
+    /* font-size: 12px; */
+    display: inline-block;
+}
+
+.shortcut-stats {
+    position: relative;
+    left: 22%;
+    bottom: 7px;
+    text-align: center;
+    margin-top: 5px;
+    width: 80px;
+    font-size: 10px;
+    padding: 4px;
+    background: lightgrey;
+    border-radius: 20px;
+    color: black;
+    display: inline-block;
+}
+
+.download-shortcut:hover {
+    animation: heartbeat 2s linear;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    14% {
+        transform: scale(1.1);
+    }
+    28% {
+        transform: scale(1);
+    }
+    42% {
+        transform: scale(1.1);
+    }
+    70% {
+        transform: scale(1);
+    }
+}
+
+div:empty {
+    display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: black;
+    }
+    h1,
+    h2 {
+        color: #ddd;
+    }
+}
+
+@media screen and (max-width: 1334px) {
+    h1 {
+        margin-top: 35px;
+    }
+}
