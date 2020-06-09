@@ -11,6 +11,10 @@
     max-width: 81%;
     height: auto;
     z-index: 2;
+    font-family: system-ui;
+    font-weight: normal;
+    display: block;
+    text-align: center;
 }
 
 #logo-view {
@@ -130,9 +134,6 @@
     }
     .dropdown-content>a {
         color: black;
-    }
-    .active {
-        color: white;
     }
 }
 
