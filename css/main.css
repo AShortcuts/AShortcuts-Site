@@ -92,6 +92,20 @@ li {
     line-height: 1em;
 }
 
+.button-v2 {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 7px;
+    text-decoration: none;
+    color: white;
+    margin: 8px 7px 7px 0px;
+}
+
+ion-icon {
+    padding-right: 4px;
+    margin-bottom: -2px;
+}
+
 .icons {
     margin: 5px;
 }
@@ -139,8 +153,8 @@ p {
 }
 
 @media screen and (max-width: 1334px) {
-    button {
-        margin-bottom: 9px;
+    .button {
+        margin-bottom: 10px;
     }
     .Line-Break {
         display: block;
