@@ -10,4 +10,4 @@ This GitHub repository holds all of the files to my website which is hosted on N
 
 ## [About Page](https://ashortcutst.netlify.app/about)
 
-# [All Shortcuts Page](https://ashortcutst.netlify.app/shortcuts)
+## [All Shortcuts Page](https://ashortcutst.netlify.app/shortcuts)
