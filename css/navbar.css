@@ -23,10 +23,6 @@
     float: right;
 }
 
-#logo-hidden {
-    display: none;
-}
-
 .nav-bar a {
     float: left;
     display: block;
@@ -48,7 +44,7 @@
 
 .nav-bar .icon {
     display: none;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .dropdown {
@@ -174,13 +170,14 @@
     }
     .nav-bar.responsive {
         position: relative;
+        padding: 7px;
     }
     .nav-bar.responsive .icon {
         position: absolute;
         right: 0;
         top: 0;
-        margin-top: 11px;
-        margin-right: 15px;
+        margin-top: 8px;
+        margin-right: 16px;
         padding: 3px;
         color: white;
     }
