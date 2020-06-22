@@ -23,6 +23,7 @@
     <meta name="twitter:image:src" content="https://ashortcutst.netlify.app/img/AShortcuts_-_1.jpeg"> -->
     <title>AS • Shortcuts</title>
     <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
     <style>
@@ -32,9 +33,16 @@
             top: 0px;
         }
         
+        .heart {
+            color: red;
+        }
+        
         @media screen and (max-width: 600px) {
             .nav-bar {
                 max-width: 93%;
+            }
+            .nav-bar.responsive {
+                margin-bottom: -65px;
             }
         }
     </style>
@@ -82,7 +90,17 @@
 
     <img style="height: 110px;width: 94%;" src="https://i.imgur.com/y6jfcPP.png">
 
-    <!-- <div id="Sourced">All of this information has been sourced from RoutineHub.co</div> -->
+    <div id="Full-Info">For more info, please go to <a href="https://routinehub.co/user/AShortcuts">RoutineHub.co</a> <br> <span style="font-size: 10px;">All of this information has been sourced from RoutineHub.co</span>
+    </div>
+
+    <!-- All of this information has been sourced from RoutineHub.co -->
+
+
+
+
+
+
+
 
 
 
@@ -176,7 +194,7 @@
                     // $.getJSON(iCloudAPI, RetrieveiCloudAPI(hi))
 
 
-                    $('#all-shortcuts').append("<div class=\"shortcut-container\"><a href=\"" + rhurl + "\"><img class=\"shortcut-icon\" src=\"" + icon + "\"></img><div class=\"shortcut-name\">" + Name + "</div><div class=\"shortcut-subtitle\">Mastery over your Battery</div><div class=\"shortcut-version\">v" + Version + " @ " + ISOrdate + "</div></a><a href=" + downloadlink + "><img class=\"download-shortcut\" src=\"https://i.imgur.com/WmgJJHh.png\"></img></a><div class=\"shortcut-stats\">♥️ &rlm;&rlm;&lrm;5 &lrm;&rlm;&rlm;&lrm; &lrm;&rlm;&rlm;&lrm; &lrm;&rlm;&rlm;&lrm; &lrm;&rlm;&rlm;&lrm;&lrm;⬇️&rlm;&rlm;&lrm; &rlm;&rlm; &lrm;1,000</div></div>")
+                    $('#all-shortcuts').append("<div class=\"shortcut-container\"><a href=\"" + rhurl + "\"><img class=\"shortcut-icon\" src=\"" + icon + "\"></img><div class=\"shortcut-name\">" + Name + "</div><div class=\"shortcut-subtitle\">Mastery over your Battery</div><div class=\"shortcut-version\">v" + Version + " @ " + ISOrdate + "</div></a><a href=" + downloadlink + "><img class=\"download-shortcut\" src=\"https://i.imgur.com/WmgJJHh.png\"></img></a><div class=\"shortcut-stats\">♥️ &rlm;&rlm;&rlm;&lrm;5 &lrm;&rlm;&rlm;&lrm; &lrm;&rlm;&rlm;&lrm; &lrm;&rlm;&rlm;&lrm; &lrm;&rlm;&rlm;&lrm;&lrm;⬇️&rlm;&rlm;&lrm; &rlm;&rlm; &lrm;1,000</div></div>")
 
                     // $('all-shortcuts').append("<div><div>" + icon + "</div><div class="shortcut-name"></div><div class="shortcut-subtitle"></div><div class="shortcut-version"> + Version + </div></div>
                     // ;
