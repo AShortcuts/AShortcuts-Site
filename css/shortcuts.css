@@ -144,6 +144,20 @@ div:empty {
     display: none;
 }
 
+#Full-Info {
+    margin-top: 30px;
+    text-align: left;
+    font-size: 16px;
+}
+
+#Full-Info a {
+    color: aquamarine;
+}
+
+#Full-Info a:hover {
+    text-decoration: underline;
+}
+
 @media (prefers-color-scheme: dark) {
     body {
         background: black;
@@ -157,5 +171,29 @@ div:empty {
 @media screen and (max-width: 1334px) {
     h1 {
         margin-top: 90px;
+    }
+    .shortcut-container {
+        width: 130px;
+    }
+    .shortcut-icon {
+        width: 50px;
+    }
+    .shortcut-name {
+        font-size: 17px;
+    }
+    .shortcut-subtitle {
+        margin-top: 2px;
+        font-size: 10px;
+    }
+    .download-shortcut {
+        left: -15px;
+        width: 33px;
+        top: 5px;
+    }
+    .shortcut-stats {
+        left: 15%;
+        bottom: 1px;
+        width: 65px;
+        font-size: 8px;
     }
 }
