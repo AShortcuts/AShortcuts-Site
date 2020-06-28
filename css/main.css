@@ -129,7 +129,7 @@ ion-icon {
     -webkit-text-fill-color: transparent;
 }
 
-.Shortcuts {
+.Shortcuts-Dark {
     font-weight: bold;
     background: linear-gradient(to right, #F75C88, #1D1F5A);
     -webkit-background-clip: text;
@@ -137,8 +137,16 @@ ion-icon {
     -webkit-text-fill-color: transparent;
 }
 
+.Shortcuts-Light {
+    font-weight: bold;
+    background: linear-gradient(to right, #EE7752, #E73C7E 40%, #0094FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .center {
-    text-align: center;
+    text-align: center !important;
 }
 
 p {
