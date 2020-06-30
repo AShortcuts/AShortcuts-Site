@@ -148,7 +148,7 @@
     }
     .nav-bar.responsive>a,
     .nav-bar.responsive>.dropdown {
-        animation: open 2s ease-in-out;
+        animation: open 1.7s ease-in-out;
     }
     @keyframes open {
         from {
