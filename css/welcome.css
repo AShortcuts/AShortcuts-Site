@@ -127,7 +127,6 @@ p {
     list-style: none;
     font-size: 30px;
     border: 2px solid yellow;
-    display: inline-block;
 }
 
 #third-page-text ul li:before {
@@ -185,6 +184,9 @@ p {
         height: 20px;
         background-size: 20px;
         margin-left: -10px;
+    }
+    #third-page-text li a {
+        vertical-align: super;
     }
 }
 
