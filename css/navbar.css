@@ -161,7 +161,7 @@
         }
     }
     .active {
-        transition: none;
+        animation: none;
     }
     #logo-hidden {
         display: block;
