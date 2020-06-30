@@ -160,7 +160,7 @@
             transform: translateX(0) perspective(0) translateZ(0px);
         }
     }
-    .active {
+    .nav-bar.responsive .active {
         animation: none;
     }
     #logo-hidden {
