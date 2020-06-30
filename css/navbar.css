@@ -160,6 +160,9 @@
             transform: translateX(0) perspective(0) translateZ(0px);
         }
     }
+    .active {
+        transition: none;
+    }
     #logo-hidden {
         display: block;
         width: 40px;
