@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Titillium+Web|Bilbo|Pinyon+Script&display=swap');
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: system-ui;
+    color: white;
+    background-color: black;
+    margin: 0;
+}
+
+#loader {
+    position: absolute;
+    bottom: 3%;
+    left: 1.5%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+#after-text {
+    display: none;
+    max-width: 500px;
+    font-weight: 500;
+}
+
+a {
+    color: aqua;
+    text-decoration: none;
+    /* text-decoration-style: wavy; */
+}
+
+section {
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#welcome-page {
+    background: url('https://i.imgur.com/oYRHTPI.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    animation: fadein 2s linear;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#welcome-page-text {
+    animation: movein 2s ease-out forwards;
+    position: absolute;
+    left: 100px;
+    bottom: 53.2%;
+}
+
+@keyframes movein {
+    from {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#welcome-page-text>h1 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 21px;
+}
+
+#second-page {
+    background: darkcyan;
+    scroll-snap-stop: always;
+}
+
+#third-page {
+    /* background: #21d4c5; */
+    background: #003366;
+    scroll-snap-stop: always;
+}
+
+#third-page-text {
+    color: black;
+    font-family: Lato;
+    position: relative;
+    left: 80px;
+    top: 65px;
+}
+
+#third-page-text a {
+    color: red;
+    text-shadow: #000000;
+    font-weight: normal;
+}
+
+#third-page-text h1 {
+    font-size: 50px;
+    font-family: Titillium Web;
+    text-shadow: 0px 0px 3px aqua;
+    color: antiquewhite;
+}
+
+#third-page-text ul {
+    margin: 10px;
+    float: left;
+    width: 40%;
+    font-weight: bold;
+    list-style: none;
+    font-size: 30px;
+    border: 2px solid yellow;
+    display: inline-block;
+}
+
+#third-page-text ul li:before {
+    content: '';
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background-size: 25px;
+    background-image: var(--my-icon-var);
+    background-repeat: no-repeat;
+    margin-right: 7px;
+}
+
+
+/* https://www.emoji.co.uk/files/emoji-one/symbols-emoji-one/2122-globe-with-meridians.png */
+
+#third-page-text li {
+    margin: 11px 0px;
+}
+
+#third-page-text .HLinks {
+    font-size: 30px;
+    color: white;
+    display: inline-block;
+    font-family: Titillium Web;
+}
+
+@media screen and (max-width: 1334px) {
+    #welcome-page-text {
+        max-width: 200px;
+        font-weight: 450;
+        left: 15px;
+        bottom: 2%;
+    }
+    #third-page-text {
+        left: 20px;
+        top: 30px;
+    }
+    #third-page-text h1 {
+        font-size: 30px;
+    }
+    #third-page-text ul {
+        width: 35%;
+        float: left;
+        padding-inline-start: 20px;
+        font-size: 13px;
+        vertical-align: super;
+        margin-left: 10px;
+    }
+    #third-page-text .HLinks {
+        font-size: 15px;
+    }
+    #third-page-text ul li:before {
+        width: 20px;
+        height: 20px;
+        background-size: 20px;
+        margin-left: -10px;
+    }
+}
+
+.obj {
+    width: 6px;
+    height: 40px;
+    background: white;
+    margin: 0 3px;
+    border-radius: 10px;
+    animation: loading 0.8s infinite;
+    background-color: #61aaf3;
+}
+
+.obj:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.obj:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.obj:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.obj:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.obj:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.obj:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+.obj:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+@keyframes loading {
+    0% {
+        height: 0px;
+    }
+    50% {
+        height: 40px;
+    }
+    100% {
+        height: 0px;
+    }
+}
