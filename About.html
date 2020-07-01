@@ -4,28 +4,25 @@
 <html lang="en" class="gr__ashortcutst_netlify_app">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" class="gr__ashortcutst_netlify_app">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/welcome.css">
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="icon" type="image/png" href="img/ASlogo.png">
+    <link rel="icon" type="image/png" href="img/BH6%20Icon.png">
     <link rel="apple-touch-icon" href="img/ASlogo.png">
     <link rel="mask-icon" href="img/ASlogo.png">
-    <meta property="og:title" content="AS • About">
-    <meta property="og:description" content="iOS Shortcuts Developer">
+    <meta property="og:title" content="AS • Welcome">
+    <meta property="og:description" content="The welcome page for AShortcut's website">
     <meta name="theme-color" content="#dc143c">
-    <meta property="og:image" content="https://ashortcutst.netlify.app/img/ASlogo.png">
+    <meta property="og:image" content="https://ashortcutst.netlify.app/img/BH6%20Icon.png">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="AShortcuts">
-    <meta property="og:url" content="https://ashortcutst.netlify.app/about">
+    <meta property="og:url" content="https://ashortcutst.netlify.app/welcome">
     <!-- For a banner image use below
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image:src" content="https://ashortcutst.netlify.app/img/AShortcuts_-_1.jpeg"> -->
-    <title>AS • About</title>
-    <script src="https://kit.fontawesome.com/91faf0cfe2.js"></script>
-    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+    <title>AS • Welcome</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170951860-1"></script>
@@ -40,90 +37,86 @@
         gtag('config', 'UA-170951860-1');
     </script>
 
+    <script>
+        var Wait = setTimeout(showPage, 2400);
 
-    <style>
-        .nav-bar {
-            max-width: 97.5%;
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("after-text").style.display = "block";
         }
-        
-        @media screen and (max-width: 600px) {
-            .nav-bar {
-                max-width: 95%;
-                left: 0px;
-                top: 0px;
-            }
-            .nav-bar.responsive {
-                margin-bottom: -70px;
-            }
-        }
-    </style>
+    </script>
 </head>
 
 <body data-gr-c-s-loaded="true">
-    <div class="nav-bar" id="MNB">
-        <a href="https://ashortcutst.netlify.app/" style="font-weight: bold;">Home</a>
-        <a href="https://ashortcutst.netlify.app/welcome">Welcome</a>
-        <a href="https://ashortcuts.bloggi.co/">News</a>
-        <a href="https://routinehub.co/user/AShortcuts">RoutineHub</a>
-        <a href="https://ashortcutst.netlify.app/shortcuts">Shortcuts</a>
-        <div class="dropdown">
-            <button class="dropbtn">Contact 
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="mailto:ashortcutst@gmail.com?subject=Website Contact">Email <img class="sm-icons" src="https://developer.apple.com/design/human-interface-guidelines/watchos/images/icon-and-image-large-icon-mail_2x.png"></a>
-                <a href="https://www.reddit.com/u/AShortcuts/">Reddit <img class="sm-icons" src="https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_reddit-512.png"></a>
-                <a href="https://discord.gg/5npjXpu">Discord Server <img class="sm-icons" src="https://b1.pngbarn.com/png/916/717/clay-os-6-a-macos-icon-discord-round-blue-icon-png-clip-art.png"></a>
-            </div>
-        </div>
-        <a href="https://ashortcutst.netlify.app/about" class="active">About</a>
-        <img src="img/AS%20Cool%20Red%20Circular.png" alt="Logo" id="logo-view">
-        <a href="javascript:void(0);" style="font-size: 15px;" class="icon" onclick="minimize()">&#9776;</a>
+    <div id="loader">
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
     </div>
 
-    <script>
-        function minimize() {
-            var x = document.getElementById("MNB");
-            if (x.className === "nav-bar") {
-                x.className += " responsive";
-                // document.getElementById("logo-view").style.display = "none";
-            } else {
-                x.className = "nav-bar";
-                // document.getElementById("logo-view").style.display = "inline";
-            }
-        }
-    </script>
+    <div id="after-text">
 
+        <section id="welcome-page">
+            <div id="welcome-page-text">
+                <h1>WELCOME</h1> <br>
+                <p>Welcome to <a href="https://ashortcutst.netlify.com">AShortcut's Website</a>.</p>
+            </div>
+        </section>
+        <section id="second-page">
+            <div id="second-page-text">
+                <h1>WELCOME</h1>
+                <p>Welcome to <a href="https://ashortcutst.netlify.com">AShortcut's Website</a>.</p>
+            </div>
+        </section>
+        <section id="third-page">
+            <div id="third-page-text">
+                <h1>Links</h1>
+                <br>
+                <ul>
+                    <li style="--my-icon-var: url('https://i.imgur.com/HyXPRBL.png')">
+                        <div class="HLinks">External Sources</div>
+                    </li>
+                    <li style="--my-icon-var: url('https://i.imgur.com/XKIFMhK.png')">
+                        <a href="https://ashortcutst.netlify.com">Website</a>
+                    </li>
+                    <li style="--my-icon-var: url('https://i.imgur.com/qEzQYeF.png')">
+                        <a href="https://routinehub.co/user/AShortcuts ">RoutineHub</a>
+                    </li>
+                    <li style="--my-icon-var: url('https://www.net-aware.org.uk/siteassets/images-and-icons/application-icons/app-icons-discord.png?w=585&scale=down')">
+                        <a href="https://discord.gg/5npjXpu">Discord</a>
+                    </li>
+                    <li style="--my-icon-var: url('https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_reddit-512.png')">
+                        <a href="https://www.reddit.com/user/AShortcuts">Reddit</a>
+                    </li>
+                    <li style="--my-icon-var: url('http://icons.iconarchive.com/icons/marcus-roberto/google-play/256/Gmail-icon.png')">
+                        <a href="mailto:ashortcutst@gmail.com">Email</a>
+                    </li>
+                    <li style="--my-icon-var: url('https://cdn2.iconfinder.com/data/icons/social-icon-3/512/social_style_3_rss-512.png')">
+                        <a href="https://ashortcuts.bloggi.co">Blog</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li style="--my-icon-var: url('https://i.imgur.com/HyXPRBL.png')">
+                        <div class="HLinks">Table of Contents</div>
+                    </li>
+                    <li style="--my-icon-var: url('https://i.imgur.com/QLPqA1Z.png')">
+                        <a href="https://ashortcutst.netlify.com/welcome">Welcome</a>
+                    </li>
+                    <li style="--my-icon-var: url('https://ashortcutst.netlify.app/img/ASlogo%20Grey%20Border.png')">
+                        <a href="https://ashortcutst.netlify.com">Main</a>
+                    </li>
+                    <li style="--my-icon-var: url('https://i.imgur.com/Z5tdeB4.png')">
+                        <a href="https://ashortcutst.netlify.com/about">About</a>
+                    </li>
+                </ul>
 
-    <!-- This is where the DOC starts -->
-
-
-    <div id="about">
-        <!-- <a href="https://ashortcutst.netlify.com"><img src="img/AShortcuts%20Cool.png" alt="Logo" title="Logo" width="100" height="100" class="image"></a> -->
-        <h1 class="AShortcuts">AShortcuts</h1>
-        <hr>
-        <!--#AF0338,#BF3302-->
-        <h1 class="headings">About Me</h1>
-        <p>
-            Welcome to my website. <br> I am <a href="https://routinehub.co/user/AShortcuts"><span class="AShortcuts">AShortcuts</span></a>, a devoted Shortcut creator. <br> I have created many useful workflows that ease my life through the iOS app called
-            <a href="https://apps.apple.com/us/app/shortcuts/id915249334"><span class="Shortcuts-Light">Shortcuts</span></a>.
-        </p>
-
-        <h2 class="headings">Uses/Benefits</h2>
-        <p>They have helped get started in the morning by showing me everything that I had planned for the day, the weather, and a route with the eta of my first destination of the day. <br>This of course is done through my <span class="Line-Break"></span>
-            <a href="https://routinehub.co/shortcut/1951">Great Morning ™</a> shortcut. <br> <br>Another Shortcut of mine has helped monitor my battery usage and has helped give me many more hours of battery life.<span class="Line-Break"></span> -
-            <a href="https://routinehub.co/shortcut/815">Ultimate Power Mode ™</a>.
-            <br><br> The complete list of my shortcuts can be found <a href="https://routinehub.co/user/AShortcuts">here</a>.
-        </p>
-
-        <h2 class="headings">Hosted on RoutineHub</h2>
-        <p>These are just 2 of my many shortcuts hosted on the famous <a href="https://routinehub.co">RoutineHub</a> developed by <a href="https://mobile.twitter.com/hmhrex">Harley Hicks</a>. <br> Harley has done such a wonderful job at creating and managing
-            his beautiful websites and I am grateful that he put so much effort into RoutineHub.</p>
-
-        <hr>
-        <br>
-
-        <p class="center">If you have any comments or feedback please click this <a href="https://ashortcutst.netlify.com/form">link</a>.<br> Thank you for visiting my website and have a wonderful day.</p>
+            </div>
+        </section>
     </div>
 </body>
 
