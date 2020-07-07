@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="">
+    <link rel="apple-touch-icon" href="">
+    <link rel="mask-icon" href="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="Online CFU Engine for RoutineHub">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:image" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="">
+    <meta property="og:url" content="">
+    <title>One &amp; Done</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="json">Checking for Updates...</div>
+    </div>
+
+    <!-- {"Status":"<span id="Status"></span>","NewVersion":"<span id="NewVersion"></span>","Changes":"<span id="Changes"></span>","Download":"<span id="Download"></span>"} -->
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const RHID = urlParams.get('rhid');
+        const CVersion = urlParams.get('v');
+        const local = {
+            "url": RHID,
+            "version": CVersion
+        };
+        let remote = "";
+        let remoteURL;  
+        (async function() {  
+            if (local.url.includes('http')) {
+                remoteURL = local.url;
+            } else {
+                remoteURL = `https://routinehub.co/api/v1/shortcuts/${local.url}/versions/latest`;
+            }  
+            remote = await fetch(remoteURL).then(r => r.json());  
+            const currentVersion = local.version;
+            const newVersion = remote.Version;
+            let difference;  
+            let currentVersionSegments = currentVersion.split(".");
+            let newVersionSegments = newVersion.split(".");  
+            if (currentVersionSegments.length > newVersionSegments.length) {
+                difference = currentVersionSegments.length - newVersionSegments.length;
+                let i = 0;
+                while (i < difference) {
+                    newVersionSegments.push("0");
+                    i++;
+                }
+            } else if (newVersionSegments.length > currentVersionSegments.length) {
+                difference = newVersionSegments.length - currentVersionSegments.length;
+                let i = 0;
+                while (i < difference) {
+                    currentVersionSegments.push("0");
+                    i++;
+                }
+            } else if (currentVersionSegments.length = newVersionSegments.length) {
+                difference = 0;
+            }  
+            let section = 0;
+            while (section < currentVersionSegments.length) {
+                let currentSection = parseInt(currentVersionSegments[section], 10);
+                let newSection = parseInt(newVersionSegments[section], 10);  
+                if (currentSection > newSection) {
+                    updateAvailable = false;
+                    section = newVersionSegments.length;
+                } else if (newSection > currentSection) {
+                    updateAvailable = true;
+                    section = newVersionSegments.length;
+                } else if (newSection === currentSection) {
+                    updateAvailable = false;
+                }
+                section++;
+            }  
+            updateAvailable = updateAvailable;
+
+            function openURL() {
+                window.location.href = remote.URL;
+            }  
+            if (updateAvailable == true) {
+                document.title = `One & Done: Update Available`;
+
+                document.getElementById("json").innerText = `{"Status":"Update Available","NewVersion":"${remote.Version}","Changes":"${remote.Notes}","Download":"${remote.URL}"}`
+
+            } else {
+                document.title = `One & Done: Up To Date`;
+                document.getElementById("json").innerText = `{"Status":"Up To Date"}`
+                statusDiv.classList.add("noupdate");
+            }  
+        }());
+    </script>
+</body>
+
+</html>
