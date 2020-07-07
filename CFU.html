@@ -18,7 +18,7 @@
     <!-- Most of the javascript below has been adapted from Mike Beasly's Shortest Updater shortcut -->
 </head>
 
-<body style="display: none">
+<body>
     <div class="container">
         <div id="json"></div>
     </div>
@@ -89,13 +89,10 @@
 
                 document.getElementById("json").innerText = `{"Status":"Update Available","NewVersion":"${remote.Version}","Changes":"${remote.Notes}","Download":"${remote.URL}"}`
 
-                document.getElementsByTagName('body')[0].style.display = "block";
-
             } else {
                 document.title = `One & Done: Up To Date`;
                 document.getElementById("json").innerText = `{"Status":"Up To Date"}`
                     // statusDiv.classList.add("noupdate");
-                document.getElementsByTagName('body')[0].style.display = "initial";
             }  
         }());
     </script>
