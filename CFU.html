@@ -5,26 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" type="image/png" href="">
-    <link rel="apple-touch-icon" href="">
-    <link rel="mask-icon" href="">
-    <meta property="og:title" content="">
+    <link rel="icon" type="image/png" href="img/sync.png">
+    <link rel="mask-icon" href="img/sync.png">
+    <meta property="og:title" content="Check for Updates">
     <meta property="og:description" content="Online CFU Engine for RoutineHub">
-    <meta name="theme-color" content="#ffffff">
-    <meta property="og:image" content="">
+    <meta name="theme-color" content="#316CFF">
+    <meta property="og:image" content="img/sync.png">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="">
-    <meta property="og:url" content="">
+    <meta property="og:site_name" content="MB & AShortcuts">
+    <meta property="og:url" content="https://ashortcutst.netlify.app/CFU">
     <title>One &amp; Done</title>
+    <!-- Most of the javascript below has been adapted from Mike Beasly's Shortest Updater shortcut -->
 </head>
 
 <body>
     <div class="container">
-        <div id="json">Checking for Updates...</div>
+        <div id="json"></div>
     </div>
-
     <!-- {"Status":"<span id="Status"></span>","NewVersion":"<span id="NewVersion"></span>","Changes":"<span id="Changes"></span>","Download":"<span id="Download"></span>"} -->
 
+    <!-- Checking for Updates... -->
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const RHID = urlParams.get('rhid');
