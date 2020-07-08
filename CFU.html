@@ -19,8 +19,6 @@
 </head>
 
 <body>
-    <pre id="json" style="word-wrap: break-word; white-space: pre-wrap;"></pre>
-    <!-- {"Status":"<span id="Status"></span>","NewVersion":"<span id="NewVersion"></span>","Changes":"<span id="Changes"></span>","Download":"<span id="Download"></span>"} -->
 
     <!-- Checking for Updates... -->
     <script>
@@ -85,11 +83,12 @@
             if (updateAvailable == true) {
                 document.title = `One & Done: Update Available`;
 
-                document.getElementById("json").innerText = `{"Status":"Update Available","NewVersion":"${remote.Version}","Changes":"${remote.Notes}","Download":"${remote.URL}"}`
+                document.write('<pre style="word-wrap: break-word; white-space: pre-wrap;">{"Status":"Update Available","NewVersion":"' + remote.Version + '","Changes":"' + remote.Notes + '","Download":"' + remote.URL + '"}</pre>')
 
             } else {
-                document.title = `One & Done: Up To Date`;
-                document.getElementById("json").innerText = `{"Status":"Up To Date"}`
+                document.title = `
+                    One & Done: Up To Date `;
+                document.write('<pre style="word-wrap: break-word; white-space: pre-wrap;">{"Status":"Up To Date"}</pre>')
                     // statusDiv.classList.add("noupdate");
             }  
         }());
