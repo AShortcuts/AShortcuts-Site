@@ -128,11 +128,6 @@
 
 
 
-
-
-
-
-
     <script>
         window.onload = GetShortcuts();
 
@@ -205,7 +200,7 @@
                     window.iCloudURL = `${data.URL}`
                     window.iCloudID = iCloudURL.replace("https://www.icloud.com/shortcuts/", "")
                     window.iCloudAPI = `https://www.icloud.com/shortcuts/api/records/${iCloudID}`
-                    window.icon = `https://routinehub-assets.s3.amazonaws.com/media/shortcuts/icons/${iCloudID}.png`;
+                    window.icon = `https://s3.us-west-002.backblazeb2.com/routinehub/media/shortcuts/icons/${iCloudID}.webp`;
 
                     // var Name = RetrieveiCloudAPI(iCloudAPI);
 
